@@ -1,0 +1,38 @@
+<br/>
+
+
+<div class="row" ng-controller="SearchController as search">
+    <div class="small-1 columns text-left" style="padding-top: 7px;">
+        <b class="text-muted">Search</b>
+    </div>
+
+    <div class="small-1 columns nopadding-right">
+        <button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false"
+                class="button tiny secondary dropdown radius" style="height: 37px;">All</button><br>
+        <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Kitchen Cleaning</a></li>
+            <li><a href="#">Microfiber</a></li>
+        </ul>
+    </div>
+
+    <form ng-submit="search.search()">
+    <div class="small-5 columns nopadding">
+        <input type="text" ng-model="search.query"/>
+    </div>
+
+    <div class="small-1 columns nopadding-left">
+        <button type="submit" class="button" style="height: 37px; padding-top: 10px; margin-left: -3px;"><span class="icon-search3"></span></button>
+    </div>
+
+    <div class="small-4 columns">
+        <ul class="inline-list size08" style="margin-top: 7px;">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Account info</a></li>
+            <li><a ui-sref="cart">Shopping Cart</a></li>
+        </ul>
+    </div>
+    </form>
+</div>
+
+<script>$(document).foundation();</script>

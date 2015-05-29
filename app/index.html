@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/vendor/foundation/css/foundation.min.css"/>
+    <link rel="stylesheet" href="/styles/nwxstyle.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="cartApp">
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<div class="container-wrapper">
+    <div class="container">
+        <div class="container-wrapper">
+            <nav class="top-bar sticky" data-topbar role="navigation">
+                <ul class="title-area">
+                    <li class="left name hide-for-medium-up hide-for-small-only">
+                <span class="view-site"><span class="view-site-text hide-for-small-only">View Site In:</span>
+                    <label class="language-label">
+                        <select class="language-select hide-for-small-only">
+                            <option value="http://www.norwex.biz">US English</option>
+                            <option value="http://www.norwex.biz">US Spanish</option>
+                            <option value="http://www.norwex.biz">Canadian French</option>
+                            <option value="http://www.norwex.biz">Canadian English</option>
+                        </select>
+                    </label>
+                </span>
+                    </li>
+                </ul>
+
+                <ul class="mobile-login right show-for-small-only">
+                    <li class="account-icon right"><a href="/consultant/login"><span class="icon-enter"></span> Login
+                    </a></li>
+                    <li class="account-icon right"><a href="/contacts"><span class="icon-mail2"> </span>Contact Us </a>
+                    </li>
+                </ul>
+                <section class="top-bar-section">
+
+                    <ul class="login-area right hide-for-small-only">
+                        <li class="right"><a href="/consultant/login"><span class="icon-enter"> </span>Consultant Login</a>
+                        </li>
+                        <li class="right"><a href="/contacts"><span class="icon-envelope"> </span>Contact Norwex</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container page-wrapper">
+    <div class="site-header">
+        <div class="row header-wrapper">
+            <div class="header">
+                <div class="medium-8 columns go-left header-logo">
+                    <a href="/">
+                        <img id="nwx-logo" src="/images/nwx-logo.png">
+                    </a>
+                </div>
+                <div class="medium-4 columns header-social hide-for-small-only">
+                    <div style="margin-top: -15px;" ng-show="$root.consultant">
+                        <img src="/images/amelia.png" alt="Amelia" class="right"/>
+                        <h5 class="header-blue">Amelia Spolec</h5>
+                        <div class="text-muted size08">
+                            Sales consultant <br/>
+                            Coppel, TX
+                            (555) 555-55-55
+                        </div>
+                    </div>
+                    <div style="margin: 15px 0 10px;">
+                        <ngcart-summary></ngcart-summary>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sticky">
+            <nav class="top-bar main-menu" data-topbar role="navigation">
+                <ul class="title-area">
+                    <li class="name"></li>
+                    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                    <li class="toggle-topbar menu-icon"><a href="#"><span class="text-left">Norwex North America</span></a>
+                    </li>
+                </ul>
+
+
+                <section class="top-bar-section">
+                    <!-- Main Navigation -->
+                    <div class="container">
+                        <ul>
+                            <li class="menu-wrap-left has-dropdown not-click">
+                                <a href="/about" class="">About Norwex</a>
+                                <ul class="dropdown">
+                                    <li><a href="/about/our-purpose">Our Purpose</a></li>
+                                    <li><a href="/about/race">Norwex R.A.C.E</a></li>
+                                    <li><a href="/about/heritage">Our Heritage</a></li>
+                                    <li><a href="/about/leadship-team">Leadship Team</a></li>
+                                    <li><a href="/about/norwex-around-the-world">Norwex Around the World</a></li>
+                                    <li><a href="/about/global-impact">Global Impact</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="has-dropdown not-click">
+                                <a href="/products" class="">Products</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">New Products</a></li>
+                                    <li><a href="#">Shop Online</a></li>
+                                    <li><a href="#">For Your Home</a></li>
+                                    <li><a href="#">For Yourself</a></li>
+                                    <li><a href="#">Specials & Sales</a></li>
+                                    <li><a href="#">Microfibre</a></li>
+                                    <li><a href="#">Products FAQ</a></li>
+                                    <li><a href="#">Ingredients Standards</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has-dropdown not-click">
+                                <a href="/host-a-party" class="">Host A Party</a>
+                                <ul class="dropdown">
+                                    <li><a href="/host-a-party/how-it-works">How It Works</a></li>
+                                    <li><a href="/host-a-party/the-rewards">The Rewards</a></li>
+                                    <li><a href="/host-a-party/how-to-book">How to Book Your Party</a></li>
+                                    <li><a href="/host-a-party/faq">Frequently Asked Questions</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-dropdown not-click">
+                                <a href="/join-us" class="">Join Us</a>
+                                <ul class="dropdown">
+                                    <li><a href="/join-us/join-for-free">Join For Free</a></li>
+                                    <li><a href="/join-us/the-norwex-opportunity">The Norwex Opportunity</a></li>
+                                    <li><a href="/join-us/how-to-get-started">How to Get Started</a></li>
+                                    <li><a href="/join-us/how-to-earn-income">How to Earn Income</a></li>
+                                    <li><a href="#">Sign Up Now</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/news-events">News & Events</a></li>
+                            <li><a href="/consultants">Consultant</a></li>
+                            <li class="menu-wrap-right"><a href="/contacts">Contacts</a></li>
+                            <li class="menu-icon"><a href="#"><span></span></a></li>
+                        </ul>
+                    </div>
+                </section>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container inner-content">
+        <ng-include src="'/template/catalog/search.html'"></ng-include>
+        <ui-view/>
+    </div>
+
+
+    <div class="footer-wrapper">
+        <footer class="row ">
+            <div class="large-12 columns">
+                <div class="row ">
+                    <div class="row">
+                        <div class="large-3 columns go-left hide-for-medium-only hide-for-small-only">
+                        </div>
+
+                        <div class="large-9 medium-12 small-12 columns">
+                            <ul class="inline-list right">
+                                <li><a href="/sitemap">Site Map</a></li>
+                                <li><a href="/terms-conditions">Terms and Conditions</a></li>
+                                <li><a href="/privacy-policies">Privacy Policies</a></li>
+                                <li><a href="/product-guarantee">Product Guarantee</a></li>
+                                <li><a href="/shipping">Shipping</a></li>
+                                <!-- <li><a href="/ingredient-standarts">Ingredient Standards</a></li> -->
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="large-9 columns go-left">
+                            <div class="copyright">&copy; 2015 Norwex North America. All rights reserved.</div>
+                            <div class="copyright-bottom">Other images and company names shown on this site may be
+                                trademarks of their respective owners.
+                            </div>
+                        </div>
+                        <div class="large-3 medium-6 small-12 columns">
+                            <a href="/consultant/login" class="radius button small-12 success right"><span
+                                    class="icon-enter"> </span>Consultant Login</a>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+
+<!-- bower:js -->
+<script src="/vendor/jquery/dist/jquery.js"></script>
+<script src="/vendor/foundation/js/foundation.min.js"></script>
+<script src="/vendor/foundation/js/vendor/modernizr.js"></script>
+<script>$(document).foundation();</script>
+
+<script src="/vendor/angular/angular.js"></script>
+<script src="/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="/vendor/angular-resource/angular-resource.min.js"></script>
+<script src="/scripts/ngCart.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="build/app_modules.js"></script>
+<script src="build/app_components.min.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

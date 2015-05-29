@@ -1,0 +1,17 @@
+<ul class="small-block-grid-2 large-block-grid-3 catalog-items">
+    <li ng-repeat="product in list.products">
+        <img style="height: 150px; margin-top: 10px;" src="/images/products/{{ product.image }}" alt="{{ product.name }}"/>
+
+        <h6 class="header-blue"><a ui-sref="^.details({id: product.id})">{{ product.name }}</a></h6>
+        <div class="size08 text-muted" style="margin-bottom: 5px;">Price: ${{ product.price }}</div>
+
+        <div ng-show="$root.consultant">
+            <ngcart-addtocart id="{{ product.id }}" name="{{ product.name }}" price="{{ product.price }}" quantity="1" quantity-max="30" data="item">
+                Add to Cart
+            </ngcart-addtocart>
+        </div>
+        <div ng-hide="$root.consultant">
+            <a class="button tiny" ng-click="$root.setConsultant()">Find a Consultant</a>
+        </div>
+    </li>
+</ul>

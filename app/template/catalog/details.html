@@ -1,0 +1,59 @@
+<ul class="breadcrumbs">
+    <li><a ui-sref="catalog.list">Catalog</a></li>
+    <li><span class="current">{{ details.product.name }}</span></li>
+</ul>
+
+<div class="row">
+    <div class="small-3 columns">
+        <img src="/images/products/{{ details.product.image }}" alt="{{ details.product.name }}"/>
+    </div>
+    <div class="small-9 columns">
+        <h4 class="header-blue">
+            {{ details.product.name }}
+        </h4>
+
+        <div class="size09">
+            {{ details.product.description }}
+        </div>
+
+        <div class="text-muted" style="margin: 8px 0;">Price: ${{ details.product.price }}</div>
+
+        <div ng-show="$root.consultant">
+            <ngcart-addtocart id="{{ details.product.id }}" name="{{ details.product.name }}" price="{{ details.product.price }}" quantity="1" quantity-max="30" data="item">
+                Add to Cart
+            </ngcart-addtocart>
+        </div>
+        <div ng-hide="$root.consultant">
+            <a class="button tiny" ng-click="$root.setConsultant()">Find a Consultant</a>
+        </div>
+    </div>
+</div>
+
+<br/>
+
+<div class="row">
+    <div class="small-12 columns">
+        <ul class="tabs" data-tab>
+            <li class="tab-title active"><a href="#details">Product Details</a></li>
+            <li class="tab-title"><a href="#related">Related Products</a></li>
+            <li class="tab-title"><a href="#availability">Availability</a></li>
+        </ul>
+
+        <div class="tabs-content size09">
+            <div class="content active " id="details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cil
+                    lum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="content" id="related">
+                List of related products
+            </div>
+            <div class="content" id="availability">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>$(document).foundation();</script>

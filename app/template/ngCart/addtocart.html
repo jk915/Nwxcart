@@ -1,0 +1,24 @@
+<div ng-hide="attrs.id">
+    <a class="button tiny" ng-disabled="true" ng-transclude></a>
+</div>
+
+<div ng-show="attrs.id">
+    <mark  ng-show="inCart()" class="size08 text-muted">
+        This item is in your cart. <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">Remove</a>
+    </mark>
+
+    <div class="row">
+        <div class="small-4 columns nopadding-right">
+            <span ng-show="quantityMax">
+                <select name="quantity" id="quantity" ng-model="q"
+                        ng-options=" v for v in qtyOpt"></select>
+            </span>
+        </div>
+
+        <div class="small-8 columns">
+            <a class="button tiny"
+               ng-click="ngCart.addItem(id, name, price, q, data)"
+               ng-transclude></a>
+        </div>
+    </div>
+</div>

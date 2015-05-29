@@ -1,0 +1,10 @@
+<div ng-controller="FiltersController as filters" class="catalog-filters">
+    <h6 class="header-blue header-bordered">Filters</h6>
+
+    <h6 class="size09" style="margin-top: 20px;"><b>Price</b></h6>
+    <div ng-repeat="price in filters.filters.price">
+        <input type="checkbox" name="price[]" id="filter{{price.min}}"
+               ng-model="price.selected" ng-change="filters.filterProducts()"/>
+        <label for="filter{{price.min}}">{{ price.name }}</label>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<br/>
+<div class="row">
+    <div class="small-12 columns">
+        <ul class="breadcrumbs">
+            <li><a ui-sref="catalog.list">Catalog</a></li>
+            <li><span class="current">Order details</span></li>
+        </ul>
+
+        <ngcart-cart></ngcart-cart>
+        <hr/>
+        <span class="left">
+            <ngcart-checkout service="http" ui-sref="catalog.list">Continue Shopping</ngcart-checkout>
+        </span>
+        <div class="text-right">
+            <ngcart-checkout service="http" settings="{ url:'/checkout' }">Proceed to Checkout</ngcart-checkout>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="small-2 columns text-right">
+        <span class="icon-cart2" style="color: #0075bb; font-size: 35px;"></span>
+    </div>
+    <div class="small-10 columns size09">{{ ngCart.getTotalItems() }}
+        <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'item', 'other':'items'}"></ng-pluralize> in a cart
+        <span style="color: #0075bb;">({{ ngCart.totalCost() | currency }})</span>
+        <br/>
+        <a ui-sref="cart">Checkout Now</a>
+    </div>
+</div>
